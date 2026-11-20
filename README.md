@@ -22,8 +22,10 @@ Dark mode follows the system. A `dark` or `light` class on `<html>` forces one.
 ## With Tailwind v4
 
 ```bash
-pnpm add github:johnnysall/theme#v1.0.0
+pnpm add https://github.com/johnnysall/theme/archive/refs/tags/v1.0.0.tar.gz
 ```
+
+The release tarball installs without git, so it also works in slim Docker build images.
 
 ```css
 @import "tailwindcss";
