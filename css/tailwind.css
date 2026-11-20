@@ -72,6 +72,96 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* iOS text styles: class="text-large-title", "text-headline"… */
+@utility text-large-title {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@utility text-title-1 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@utility text-title-2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@utility text-title-3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+@utility text-headline {
+  font-family: var(--font-system);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@utility text-body {
+  font-family: var(--font-system);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+@utility text-callout {
+  font-family: var(--font-system);
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+@utility text-subheadline {
+  font-family: var(--font-system);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+@utility text-footnote {
+  font-family: var(--font-system);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+@utility text-caption {
+  font-family: var(--font-system);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@utility text-section {
+  font-family: var(--font-system);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

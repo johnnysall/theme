@@ -132,3 +132,20 @@ export const shared = {
   "glass-blur": "blur(24px) saturate(180%)",
   "glass-shadow": "0 8px 28px -8px rgba(0, 0, 0, 0.22)",
 };
+
+// iOS text styles (Dynamic Type at the default size). Each becomes a Tailwind utility,
+// e.g. class="text-large-title". `display` uses SF Pro Display, the rest SF Pro Text.
+export const textStyles = {
+  "large-title": { size: 34, line: 41, weight: 700, tracking: "0.01em", display: true },
+  "title-1": { size: 28, line: 34, weight: 700, tracking: "0.01em", display: true },
+  "title-2": { size: 22, line: 28, weight: 700, tracking: "0.01em", display: true },
+  "title-3": { size: 20, line: 25, weight: 600, tracking: "0.02em", display: true },
+  headline: { size: 17, line: 22, weight: 600, tracking: "-0.02em" },
+  body: { size: 17, line: 22, weight: 400, tracking: "-0.02em" },
+  callout: { size: 16, line: 21, weight: 400, tracking: "-0.02em" },
+  subheadline: { size: 15, line: 20, weight: 400, tracking: "-0.01em" },
+  footnote: { size: 13, line: 18, weight: 400, tracking: "-0.005em" },
+  caption: { size: 12, line: 16, weight: 400, tracking: "0" },
+  // A grouped list's section header
+  section: { size: 13, line: 18, weight: 400, tracking: "0.02em", upper: true },
+};

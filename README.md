@@ -13,7 +13,7 @@ they pick a change up when their tag is bumped.
 | Import | What it is | Used by |
 |---|---|---|
 | `@johnnysall/theme/tokens.css` | the colours, fonts and radius as CSS variables, light and dark | any CSS |
-| `@johnnysall/theme/tailwind.css` | Tailwind v4 theme (`bg-primary`, `text-positive`, `font-heading`…), the `dark:` variant and base styles | Tailwind v4 apps |
+| `@johnnysall/theme/tailwind.css` | Tailwind v4 theme (`bg-primary`, `text-positive`, `font-heading`…), iOS text styles (`text-large-title`, `text-headline`, `text-section`…), the `dark:` variant and base styles | Tailwind v4 apps |
 | `@johnnysall/theme/glass.css` | the `glass` and `glass-strong` utilities | frosted bars and panels |
 | `@johnnysall/theme/lit` | the tokens and glass as strings for Lit's `unsafeCSS`, scoped to `:host` | Lit components |
 
@@ -22,7 +22,7 @@ Dark mode follows the system. A `dark` or `light` class on `<html>` forces one.
 ## With Tailwind v4
 
 ```bash
-pnpm add https://github.com/johnnysall/theme/archive/refs/tags/v1.0.0.tar.gz
+pnpm add https://github.com/johnnysall/theme/archive/refs/tags/v1.1.0.tar.gz
 ```
 
 The release tarball installs without git, so it also works in slim Docker build images.

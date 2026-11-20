@@ -2,7 +2,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-import { dark, light, shared } from "./tokens.mjs";
+import { dark, light, shared, textStyles } from "./tokens.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const HEADER = "/* Generated from src/tokens.mjs by src/build.mjs. Don't edit by hand. */\n";
@@ -26,6 +26,18 @@ const tokens =
 
 // tailwind.css: Tailwind v4 theme + base styles over the tokens
 const colorKeys = Object.keys(light).filter((k) => !k.startsWith("glass"));
+const typeScale = Object.entries(textStyles)
+  .map(
+    ([name, t]) => `@utility text-${name} {
+  font-family: var(${t.display ? "--font-display" : "--font-system"});
+  font-size: ${t.size}px;
+  line-height: ${t.line}px;
+  font-weight: ${t.weight};
+  letter-spacing: ${t.tracking};${t.upper ? "\n  text-transform: uppercase;" : ""}
+}
+`,
+  )
+  .join("\n");
 const tailwind =
   HEADER +
   `/* dark: follows the system, or a "dark" / "light" class on <html> */
@@ -54,6 +66,8 @@ ${colorKeys.map((k) => `  --color-${k}: var(--${k});`).join("\n")}
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* iOS text styles: class="text-large-title", "text-headline"… */
+${typeScale}
 @layer base {
   * {
     @apply border-border outline-ring/50;
